@@ -110,12 +110,12 @@ async def msg_voice(client: Client, message: Message):
 		await app.download_media(message,file_name=pat)
 		await dirup(message,pat,tgapi,otherr)
 
-#@app.on_message(filters.thumbnail & filters.private & ~filters.bot)
-#async def msg_thumbnail(client: Client, message: Message):
-#	print('thumbnail recived')
-#	pat='thumbnail/'
+#@app.on_message(filters.thumbs & filters.private & ~filters.bot)
+#async def msg_thumbs(client: Client, message: Message):
+#	print('thumbnail received')
+#	pat='thumbs/'
 #	tgapi='/sendThumbnail'
-#	if message.thumbnail.file_size>50428800:
+#	if message.thumbs.file_size>50428800:
 #		await message.forward(log_channel)
 #	else:
 #		if message.from_user.username  == myuserid:
