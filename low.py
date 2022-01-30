@@ -23,7 +23,7 @@ def utc_to_time(naive, timezone="Asia/Jakarta"):
 
 async def dirup(message,pat,tgapi,otherr):
 	pat=pat[:-1]
-	tes =tgapi+'?caption=💝 Untuk : '+otherr+ str(message.chat.first_name)+"\n💠 Username : @"+str(message.chat.username) +"\n🌐 Link User :\n🔗 tg://openmessage?user_id="+str(message.chat.id) +"\n\n💌 Pesan : \n   "+str(message.caption)+"\n\n⏱ Waktu :\n"+str(utc_to_time(message.date))
+	tes =tgapi+'?caption=For : '+otherr+ str(message.chat.first_name)+"\n💠 Username : @"+str(message.chat.username) +"\n🌐 Link User :\n🔗 tg://openmessage?user_id="+str(message.chat.id) +"\n\nPesan : \n🗣️"+str(message.caption)+"\n\n⏱ Waktu :\n"+str(utc_to_time(message.date))
 	arr = os.listdir(pat)
 	for files in arr:
 		pathh=pat+"/"+str(files)
@@ -48,7 +48,7 @@ async def msg_text(client: Client, message: Message):
 	if message.from_user.username == myuserid:
 		tes ="Saya : @"+myuserid+"\n💝 Penerima : "+ str(message.chat.first_name)+"\n💠 Username : @"+ str(message.chat.username)+"\n🌐 Link User : \n🔗 tg://openmessage?user_id="+ str(message.chat.id)+"\n\n💌 Pesan : \n"+str(message.text)+"\n\n⏱ Waktu : \n"+str(utc_to_time(message.date))
 	else:
-		tes ="Dari : "+ str(message.from_user.first_name)+"\n💠 Penerima : @"+str(message.chat.username) +"🌐 Link Profil : \n🔗 tg://openmessage?user_id="+ str(message.chat.id)+"\n\n💌 Pesan : \n   "+str(message.text)+"\n\n⏱ Waktu : \n"+str(utc_to_time(message.date))
+		tes ="Dari : "+ str(message.from_user.first_name)+"\n💠 Penerima : @"+str(message.chat.username) +"\n🌐 Link Profil : \n🔗 tg://openmessage?user_id="+ str(message.chat.id)+"\n\nPesan : \n🗣️"+str(message.text)+"\n\n⏱ Waktu : \n"+str(utc_to_time(message.date))
 	g=requests.post(BOT_url+'/sendmessage' , json={"chat_id":log_channel,"text":tes})
 	print(tes)
 	print(g)
