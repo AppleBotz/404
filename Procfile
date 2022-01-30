@@ -1,1 +1,1 @@
-worker: python3 ChatBackuper.py
+worker: python3 low.py
