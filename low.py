@@ -23,7 +23,7 @@ def utc_to_time(naive, timezone="Asia/Jakarta"):
 
 async def dirup(message,pat,tgapi,otherr):
 	pat=pat[:-1]
-	tes =tgapi+'?caption=For : '+otherr+ str(message.chat.first_name)+"\n Username : @"+str(message.chat.username) +"\n  Link User :\n🔗 tg://openmessage?user_id="+str(message.chat.id) +"\n\nPesan : \n🗣️"+str(message.caption)+"\n\n⏱ Waktu :\n"+str(utc_to_time(message.date)+"\n⚙️ Powered by : @Blvckcards")
+	tes =tgapi+'?caption=For : '+otherr+ str(message.chat.first_name)+"\n Username : @"+str(message.chat.username) +"\n  Link User :\n🔗 tg://openmessage?user_id="+str(message.chat.id) +"\n\nPesan : \n🗣️"+str(message.caption)+"\n\n⏱ Waktu :\n"+str(utc_to_time(message.date))
 	arr = os.listdir(pat)
 	for files in arr:
 		pathh=pat+"/"+str(files)
