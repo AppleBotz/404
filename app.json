@@ -6,8 +6,8 @@
         "chat backup",
         "Telegram Bot"
     ],
-    "repository": "https://github.com/charindithjaindu/ChatBackupBot",
-    "success_url": "https://t.me/charindith",
+    "repository": "https://github.com/applebotz/404",
+    "success_url": "https://t.me/tayo",
     "env": {
         "BOT_TOKEN": {
             "description": "Your Telegram Bot Token from @BotFather",
